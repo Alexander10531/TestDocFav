@@ -1,5 +1,6 @@
 # ¿Como levantar el proyecto?
 ## Unicamente se tiene que ejecutar los siguientes comandos
+- Tener instalado composer para la instalacion de la paqueteria necesaria del servicio en PHP
 - docker build -f sql/Dockerfile -t database-tag sql/
 - docker build -f Docker/Dockerfile -t backend-application .
 - docker-compose build 
