@@ -1,0 +1,21 @@
+networks: 
+  test-network: 
+    driver: bridge 
+
+services:
+  db:
+    container_name: database-test
+    image: database-tag:latest
+    ports:
+      - "3306:3306"
+    networks: 
+      - test-network
+  app: 
+    container_name: backend-application
+    image: backend-application
+    ports: 
+      - 8080:8080
+    networks: 
+      - test-network
+    depends_on: 
+      - db
